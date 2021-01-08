@@ -1,0 +1,52 @@
+{
+        "name": "wfrp2-pl",
+        "title": "Basics for Warhammer 2nd edition system. PL version",
+        "description": "Bez dodatkowych mechanik, KP, Bronie, zaklęcia i inne, przydatne rzeczy",
+        "version": "0.1.0",
+        "templateVersion": 2,
+        "minimumCoreVersion": "0.7.9",
+        "author": "Michał Krawczyk",
+        "scripts": [
+          "scripts/system-script.js"
+        ],
+        "esmodules": [
+          "scripts/system-module.mjs"
+        ],
+        "styles": [
+          "styles/system-style.css"
+        ],
+        "packs": [
+          {
+            "name": "monsters",
+            "label": "Potwory",
+            "system": "wfrp2-pl",
+            "module": "wfrp2-pl",
+            "path": "packs/monsters.db",
+            "entity": "Actor"
+          },
+          {
+            "name": "items",
+            "label": "Przedmioty",
+            "system": "wfrp2-pl",
+            "module": "wfrp2-pl",
+            "path": "packs/items.db",
+            "entity": "Item"
+          }
+        ],
+        "languages": [
+          {
+            "lang": "pl",
+            "name": "Polish",
+            "path": "lang/pl.json"
+          }
+        ],
+        "socket": false,
+        "initiative": "1d10",
+        "gridDistance": 2,
+        "gridUnits": "m",
+        "primaryTokenAttribute": "resources.health",
+        "secondaryTokenAttribute": null,
+        "url": null,
+        "manifest": null,
+        "download": null
+      }
