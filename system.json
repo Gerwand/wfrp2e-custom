@@ -1,29 +1,32 @@
 {
-        "name": "wfrp2e",
-        "title": "Basics for Warhammer 2nd edition system. PL version",
-        "description": "Bez dodatkowych mechanik, KP, Bronie, zaklęcia i inne, przydatne rzeczy",
-        "version": "0.1.0",
-        "templateVersion": 1,
-        "minimumCoreVersion" : "0.7.9",
-        "author": "Michał Krawczyk",
-        "scripts": [
-          "scripts/system-script.js"
-        ],
-        "esmodules": [
-          "scripts/system-module.mjs"
-        ],
-        "styles": [
-          "styles/system-style.css"
-        ],
-        "packs": [],
-        "languages": [],
-        "socket": false,
-        "initiative": "1d10 + @stats.zr.value",
-        "gridDistance": 2,
-        "gridUnits": "m",
-        "primaryTokenAttribute": null,
-        "secondaryTokenAttribute": null,
-        "url": "127.0.0.1",
-        "manifest": "127.0.0.1",
-        "download": "127.0.0.1"
-      }
+  "name": "wfrp2e",
+  "title": "Warhammer Fantasy Roleplay 2ed - Gerwand's mode",
+  "description": "Bez dodatkowych mechanik, KP, Bronie, zaklęcia i inne, przydatne rzeczy",
+  "version": "0.2.0",
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "templateVersion": 1,
+  "author": "Michał Krawczyk",
+  "esmodules": [
+    "module/wfrp2e.js"
+  ],
+  "styles": [
+    "css/wfrp2e.css"
+  ],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "pl",
+      "name": "Polish",
+      "path": "lang/pl.json"
+    }
+  ],
+  "gridDistance": 2,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "stan.hp",
+  "secondaryTokenAttribute": null,
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

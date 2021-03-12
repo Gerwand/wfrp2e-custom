@@ -1,0 +1,44 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        {{!-- Header stuff goes here --}}
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Przydomek"/></h1>
+            <div class="resources grid grid-3col">
+                {{!-- Życie --}}
+                <div class="resource flexcol flex-group-center">
+                    <label for="data.stan.hp.value" class="resource-label">Punkty Trafień</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.stan.hp.value" value="{{data.stan.hp.value}}" data-dtype="Number"/>
+                        <span>/</span>
+                        <span>{{data.stan.hp.max}}</span>
+                    </div>
+                </div> {{!-- /Życie }}
+                {{!-- Ammo --}}
+                <div class="resource flex-group-center">
+                    <label for="data.stan.ammo.value" class="resource-label">Amunicja</label>
+                    <input type="text" name="data.stan.ammo.value" value="{{data.stan.ammo.value}}" data-dtype="Number"/>
+                </div> {{!-- /Ammo --}}
+                {{!-- Punkty Szczęścia --}}
+                <div class="resource flex-group-center">
+                    <label for="data.mental.ps.value" class="resource-label">Punkty Szczęścia</label>
+                    <input type="text" name="data.mental.ps.value" value="{{data.mental.ps.value}}" data-dtype="Number"/>
+            </div> {{!-- /Punkty Szczęścia --}}
+            </div>
+            <div class="resources grid grid-3col">{{!-- abilities here --}}</div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">Opis</a>
+        <a class="item" data-tab="items">Przedmioty</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Tab content goes here --}}
+    </section>
+</form>

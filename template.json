@@ -1,68 +1,85 @@
 {
   "Actor": {
-    "types": ["BG"],
+    "types": [
+      "BG"
+    ],
     "templates": {
       "staty": {
-        "ww": {
-          "value": 20
-        },
-        "us": {
-          "value": 20
-        },
-        "k": {
-          "value": 20
-        },
-        "wt": {
-          "value": 20
-        },
-        "zr": {
-          "value": 20
-        },
-        "int": {
-          "value": 20
-        },
-        "sw": {
-          "value": 20
-        },
-        "ogd": {
-          "value": 20
-        },
-        "a": {
-          "value": 1
-        },
-        "zyw": {
-          "value": 10
+        "staty": {
+          "ww": {
+            "value": 20
+          },
+          "us": {
+            "value": 20
+          },
+          "k": {
+            "value": 20
+          },
+          "wt": {
+            "value": 20
+          },
+          "zr": {
+            "value": 20
+          },
+          "int": {
+            "value": 20
+          },
+          "sw": {
+            "value": 20
+          },
+          "ogd": {
+            "value": 20
+          },
+          "a": {
+            "value": 1
+          },
+          "zyw": {
+            "value": 10
+          },
+          "s": {
+            "value": 2
+          },
+          "wyt": {
+            "value": 2
+          }
         }
       },
       "stan": {
-        "hp": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "ammo": {
-          "value": 0,
-          "min": 0
+        "stan": {
+          "hp": {
+            "value": 10,
+            "min": 0,
+            "max": 10
+          },
+          "ammo": {
+            "value": 0,
+            "min": 0
+          }
         }
       },
-      "psycha": {
-        "po": {
-          "min": 0,
-          "value": 0
-        },
-        "ps": {
-          "min": 0,
-          "value": 0
-        },
-        "pp": {
-          "min": 0,
-          "value": 0
+      "mental": {
+        "mental": {
+          "po": {
+            "min": 0,
+            "value": 0
+          },
+          "ps": {
+            "min": 0,
+            "value": 0
+          },
+          "pp": {
+            "min": 0,
+            "value": 0
+          }
         }
       }
     },
-
     "BG": {
-      "templates": ["staty", "stan", "psycha"],
+      "templates": [
+        "staty",
+        "stan",
+        "mental"
+      ],
       "pd": {
         "min": 0,
         "value": 0
@@ -73,9 +90,10 @@
       }
     }
   },
-
   "Item": {
-    "types":["weapon"],
+    "types": [
+      "weapon"
+    ],
     "weapon": {
       "dmg": 3
     }
