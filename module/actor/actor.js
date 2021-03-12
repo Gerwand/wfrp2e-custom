@@ -15,7 +15,7 @@ export class WFRP2eActor extends Actor {
 
         console.log("WFRP2e      | preparing actor data");
 
-        if ("staty" in data)
+        if ("statsBasic" in data)
             this._calcStats(actorData);
 
         // Make separate methods for each Actor type (character, npc, etc.) to keep
@@ -30,11 +30,11 @@ export class WFRP2eActor extends Actor {
     _calcStats(actorData) {
         const data = actorData.data;
 
-        data.staty.s = data.staty.k / 10;
-        data.staty.wt = data.staty.odp / 10;
+        data.statsExtra.s.value = Math.floor(data.statsBasic.k.value / 10);
+        data.statsExtra.wt.value = Math.floor(data.statsBasic.odp.value / 10);
 
-        data.stan.hp.max = data.staty.zyw.value;
-        //data.stan.hp.value = data.staty.zyw;
+        data.state.hp.max = data.statsExtra.zyw.value;
+        //data.state.hp.value = data.stats.zyw;
     }
 
     /**

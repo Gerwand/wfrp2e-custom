@@ -4,89 +4,128 @@
       "BG"
     ],
     "templates": {
-      "staty": {
-        "staty": {
+      "stats": {
+        "statsBasic": {
           "ww": {
-            "value": 20
+            "value": 20,
+            "label": "Walka Wręcz",
+            "abbrev": "WW"
           },
           "us": {
-            "value": 20
+            "value": 20,
+            "label": "Umiejętności Strzeleckie",
+            "abbrev": "US"
           },
           "k": {
-            "value": 20
+            "value": 20,
+            "label": "Krzepa",
+            "abbrev": "K"
           },
-          "wt": {
-            "value": 20
+          "odp": {
+            "value": 20,
+            "label": "Odporność",
+            "abbrev": "Odp"
           },
           "zr": {
-            "value": 20
+            "value": 20,
+            "label": "Zręczność",
+            "abbrev": "Zr"
           },
           "int": {
-            "value": 20
+            "value": 20,
+            "label": "Inteligencja",
+            "abbrev": "Int"
           },
           "sw": {
-            "value": 20
+            "value": 20,
+            "label": "Siła Woli",
+            "abbrev": "SW"
           },
           "ogd": {
-            "value": 20
-          },
+            "value": 20,
+            "label": "Ogłada",
+            "abbrev": "Ogd"
+          }
+        },
+        "statsExtra": {
           "a": {
-            "value": 1
+            "value": 1,
+            "label": "Ataki",
+            "abbrev": "A"
           },
           "zyw": {
-            "value": 10
+            "value": 10,
+            "label": "Żywotność",
+            "abbrev": "Żyw"
           },
           "s": {
-            "value": 2
+            "value": 2,
+            "label": "Siła",
+            "abbrev": "S"
           },
-          "wyt": {
-            "value": 2
-          }
-        }
-      },
-      "stan": {
-        "stan": {
-          "hp": {
-            "value": 10,
-            "min": 0,
-            "max": 10
+          "wt": {
+            "value": 2,
+            "label": "Wytrzymałość",
+            "abbrev": "Wt"
           },
-          "ammo": {
+          "szy": {
+            "value": 4,
+            "label": "Szybkość",
+            "abbrev": "Szy"
+          },
+          "mag": {
             "value": 0,
-            "min": 0
-          }
-        }
-      },
-      "mental": {
-        "mental": {
+            "label": "Magia",
+            "abbrev": "Mag"
+          },
           "po": {
             "min": 0,
-            "value": 0
-          },
-          "ps": {
-            "min": 0,
-            "value": 0
+            "value": 0,
+            "label": "Punkty Obłędu",
+            "abbrev": "PO"
           },
           "pp": {
             "min": 0,
-            "value": 0
+            "value": 0,
+            "label": "Punkty Przeznaczenia",
+            "abbrev": "PP"
+          }
+        }
+      },
+      "state": {
+        "state": {
+          "hp": {
+            "value": 10,
+            "min": 0,
+            "max": 10,
+            "label": "Punkty Trafień"
+          },
+          "ammo": {
+            "value": 0,
+            "label": "Amunicja"
+          },
+          "ps": {
+            "value": 0,
+            "label": "Punkty Szczęścia",
+            "abbrev": "PS"
           }
         }
       }
     },
     "BG": {
       "templates": [
-        "staty",
-        "stan",
-        "mental"
+        "stats",
+        "state"
       ],
       "pd": {
-        "min": 0,
-        "value": 0
+        "value": 0,
+        "label": "Punkty Doświadczenia",
+        "abbrev": "PD"
       },
       "pd-total": {
-        "min": 0,
-        "value": 0
+        "value": 0,
+        "label": "Suma Punktów Doświadczenia",
+        "abbrev": "PD ogółem"
       }
     }
   },

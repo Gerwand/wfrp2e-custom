@@ -26,11 +26,7 @@ export class WFRP2eActorSheet extends ActorSheet {
     /** @override */
     getData() {
         const data = super.getData();
-/*         data.dtypes = ["String", "Number", "Boolean"]; */
-/*         for (let attr of Object.values(data.data.staty)) {
-            attr.isCheckbox = attr.dtype === "Boolean";
-        } */
-
+        /* TODO - modify data before returning them to the sheet. */
         return data;
     }
 

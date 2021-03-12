@@ -1,44 +1,94 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
 
-    {{!-- Sheet Header --}}
+    <!-- Sheet Header -->
     <header class="sheet-header">
-        {{!-- Header stuff goes here --}}
+        <!-- Header stuff goes here -->
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Przydomek"/></h1>
+
+            <!-- resources -->
             <div class="resources grid grid-3col">
-                {{!-- Życie --}}
+                <!-- Życie -->
                 <div class="resource flexcol flex-group-center">
-                    <label for="data.stan.hp.value" class="resource-label">Punkty Trafień</label>
+                    <label for="data.state.hp.value" class="resource-label">{{data.state.hp.label}}</label>
                     <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="data.stan.hp.value" value="{{data.stan.hp.value}}" data-dtype="Number"/>
+                        <input type="text" name="data.state.hp.value" value="{{data.state.hp.value}}" data-dtype="Number"/>
                         <span>/</span>
-                        <span>{{data.stan.hp.max}}</span>
+                        <span>{{data.state.hp.max}}</span>
                     </div>
-                </div> {{!-- /Życie }}
-                {{!-- Ammo --}}
+                </div>
+                <!-- Ammo -->
                 <div class="resource flex-group-center">
-                    <label for="data.stan.ammo.value" class="resource-label">Amunicja</label>
-                    <input type="text" name="data.stan.ammo.value" value="{{data.stan.ammo.value}}" data-dtype="Number"/>
-                </div> {{!-- /Ammo --}}
-                {{!-- Punkty Szczęścia --}}
+                    <label for="data.state.ammo.value" class="resource-label">{{data.state.ammo.label}}</label>
+                    <input type="text" name="data.state.ammo.value" value="{{data.state.ammo.value}}" data-dtype="Number"/>
+                </div>
+                <!-- Punkty Szczęścia -->
                 <div class="resource flex-group-center">
-                    <label for="data.mental.ps.value" class="resource-label">Punkty Szczęścia</label>
-                    <input type="text" name="data.mental.ps.value" value="{{data.mental.ps.value}}" data-dtype="Number"/>
-            </div> {{!-- /Punkty Szczęścia --}}
-            </div>
-            <div class="resources grid grid-3col">{{!-- abilities here --}}</div>
+                    <label for="data.state.ps.value" class="resource-label">{{data.state.ps.label}}</label>
+                    <input type="text" name="data.state.ps.value" value="{{data.state.ps.value}}" data-dtype="Number"/>
+                </div>
+            </div> <!-- /resources -->
         </div>
     </header>
 
-    {{!-- Sheet Tab Navigation --}}
+    <!-- Sheet Tab Navigation -->
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Opis</a>
-        <a class="item" data-tab="items">Przedmioty</a>
+        <a class="item" data-tab="stats">Statystyki</a>
+        <!--<a class="item" data-tab="description">Opis</a>-->
     </nav>
 
-    {{!-- Sheet Body --}}
+    <!-- Sheet Body -->
     <section class="sheet-body">
-        {{!-- Tab content goes here --}}
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            <!-- Character statistics - table -->
+            <table class="stats">
+                <thead>
+                    <tr>
+                        <th></th>
+                        {{#each data.statsBasic as |stat key|}}
+                            <th>
+                                <label for="data.statsBasic.{{key}}.value">{{stat.abbrev}}</label>
+                            </th>
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><small>Wartość</small></td>
+                        {{#each data.statsBasic as |stat key|}}
+                            <td>
+                                <input type="text" name="data.statsBasic.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+                            </td>
+                        {{/each}}
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th></th>
+                        {{#each data.statsExtra as |stat key|}}
+                            <th>
+                                <label for="data.statsExtra.{{key}}.value">{{stat.abbrev}}</label>
+                            </th>
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><small>Wartość</small></td>
+                        {{#each data.statsExtra as |stat key|}}
+                            <td>
+                                {{#if (isStatConst key)}}
+                                    {{stat.value}}
+                                {{else}}
+                                    <input type="text" name="data.statsExtra.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+                                {{/if}}
+                            </td>
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </table>
+        </div> <!-- tab stats -->
     </section>
 </form>

@@ -16,7 +16,7 @@ Hooks.once("init", function() {
     * @type {String}
     */
     CONFIG.Combat.initiative = {
-        formula: "1d10 + @staty.zr.value",
+        formula: "1d10 + @statsBasic.zr.value",
         decimals: 2
     }
 
@@ -28,4 +28,8 @@ Hooks.once("init", function() {
 
 //    Items.unregisterSheet("core", ItemSheet);
 //    Items.registerSheet("wfrp2e", WFRP2eItemSheet, {makeDefault: true});
+
+    Handlebars.registerHelper('isStatConst', function (name) {
+        return name === "wt" || name === "s";
+    });
 });
