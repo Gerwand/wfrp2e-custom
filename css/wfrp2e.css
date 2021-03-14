@@ -114,6 +114,66 @@
   justify-content: space-between;
 }
 
+.placeable-hud .token-ps {
+  position: relative;
+  top: -130px;
+  width: 100px;
+  height: 60px;
+  box-sizing: content-box;
+  margin: 0;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+.token-ps .ps-icons {
+  flex: 1 100px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #DDD;
+  line-height: 30px;
+  font-size: 19px;
+  font-weight: bold;
+  pointer-events: all;
+  margin-top: auto;
+}
+
+.token-ps .ps-icons:hover {
+  color: gold;
+}
+
+.token-ps .ps-add {
+    color: #DDD;
+    position: absolute;
+    bottom: -10px;
+    left: 42.5px;
+    font-size: 15px;
+    margin: 0;
+    pointer-events: all;
+}
+
+.token-ps .ps-add:hover {
+  color: lightgreen;
+}
+
+.token-ps .ps-add:active {
+  color: greenyellow;
+}
+
+.token-ps .ps-icons .ps-more {
+  position: absolute;
+  top: 15px;
+  right: -8px;
+  font-size: 15px;
+  margin: 0;
+}
+
+.placeable-hud .ps-icons:hover {
+  box-shadow: 0 0 10px #c60;
+}
+
 /* Styles limited to wfrp2e sheets */
 .wfrp2e .item-form {
   font-family: "Roboto", sans-serif;

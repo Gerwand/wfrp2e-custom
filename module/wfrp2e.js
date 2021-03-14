@@ -2,6 +2,9 @@ import { WFRP2eActor } from "./actor/actor.js";
 import { WFRP2eActorSheet } from "./actor/actor-sheet.js";
 //import { WFRP2eItem } from "./item/item.js";
 //import { WFRP2eItemSheet } from "./item/item-sheet.js";
+import { wfrp2eRegisterTokenHooks } from "./token/token-hooks.js"
+
+wfrp2eRegisterTokenHooks();
 
 Hooks.once("init", function() {
     console.log("WFRP2e      | Initializing system");

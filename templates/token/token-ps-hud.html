@@ -1,0 +1,19 @@
+<div class="token-ps">
+    <div class="ps-icons">
+        <span id="ps-add" class="fas fa-plus-circle ps-add"></span>
+        {{#each psData.values}}
+            {{#if this}}
+                <span class="fas fa-star"></span>
+            {{else}}
+                <span class="far fa-star"></span>
+            {{/if}}
+        {{/each}}
+        {{#if psData.more}}
+            <div class="ps-more">
+                {{psData.diff}}
+                <span class="fas fa-plus"></span>
+            </div>
+        {{/if}}
+    </div>
+    </div>
+</div>
