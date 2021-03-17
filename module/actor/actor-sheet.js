@@ -15,7 +15,7 @@ export class WFRP2eActorSheet extends ActorSheet {
             width: 600,
             height: 600,
             /* Tabs on the character sheet. navSelector and contentSelector are the default ones. */
-            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
+            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }]
         })
     }
 
