@@ -3,9 +3,17 @@ export function wfrp2eRegisterTokenHooks() {
 }
 
 function _onClickPSHUD(event) {
+    event.preventDefault();
     const token = canvas.tokens.get(event.data._id);
     const actor = token.actor;
     const actorState = token.actor.data.data.state;
+
+    // Make sure the event comes from a right source.
+    if (event.target.id !== "ps-add" &&
+        event.target.id !== "ps-container" &&
+        event.target.parentNode.id !== "ps-container") {
+        return;
+    }
 
     // Check if '+' was clicked
     if (event.target.id === "ps-add") {
