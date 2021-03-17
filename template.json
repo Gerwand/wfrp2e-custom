@@ -131,10 +131,62 @@
   },
   "Item": {
     "types": [
-      "weapon"
+      "item",
+      "weapon-melee",
+      "weapon-ranged",
+      "ability",
+      "armor"
     ],
-    "weapon": {
-      "dmg": 3
+    "templates": {
+      "common": {
+        "description": ""
+      },
+      "item": {
+        "weight": 0,
+        "price": {
+          "zk": 0,
+          "sz": 0,
+          "p": 0
+        },
+        "quality": 1
+      },
+      "weapon": {
+        "damage": 0,
+        "category": "zwykła",
+        "specials": "",
+        "onehand": true
+      }
+    },
+    "item": {
+      "templates": [
+        "common",
+        "item"
+      ],
+      "quantity": 1
+    },
+    "weapon-melee": {
+      "templates": [
+        "common",
+        "item",
+        "weapon"
+      ]
+    },
+    "weapon-ranged": {
+      "templates": [
+        "common",
+        "item",
+        "weapon"
+      ],
+      "range": {
+        "normal": 0,
+        "far": 0
+      },
+      "reload": 1
+    },
+    "ability": {
+      "templates": [
+        "base"
+      ]
     }
   }
 }
