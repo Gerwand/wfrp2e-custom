@@ -34,7 +34,8 @@ export class WFRP2eActor extends Actor {
         data.statsExtra.wt.value = Math.floor(data.statsBasic.odp.value / 10);
 
         data.state.hp.max = data.statsExtra.zyw.value;
-        //data.state.hp.value = data.stats.zyw;
+        data.state.hp.value = Math.min(data.state.hp.value, data.state.hp.max);
+        data.state.ammo.value = Math.max(data.state.ammo.value, 0);
     }
 
     /**
